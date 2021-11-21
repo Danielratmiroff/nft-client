@@ -1,10 +1,20 @@
-import React, { FC, KeyboardEvent, useState } from "react";
+import React, { FC, Fragment, KeyboardEvent, useState } from "react";
+import Navbar from "./components/Navbar";
 import { useAppDispatch, useTypedSelector } from "./redux/store";
+import * as Styled from "./AppStyles";
+import "./assets/styles.css";
 
 const App: FC = () => {
   const dispatch = useAppDispatch();
 
-  return <div>Pene a la orden: Llama a +420 69 69 69.</div>;
+  return (
+    <Fragment>
+      <Styled.AppContainer>
+        <Navbar />
+        <section>Hello</section>
+      </Styled.AppContainer>
+    </Fragment>
+  );
 };
 
 export default App;
