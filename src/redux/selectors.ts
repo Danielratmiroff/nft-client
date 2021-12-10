@@ -1,7 +1,7 @@
 import { createSelector } from "reselect";
 import { RootState } from "./store";
 
-// refactor bug
-const _settings = (state: RootState) => state.settings;
+const _settings = (state: RootState) => state.system;
 
-export const getUser = createSelector(_settings, (state) => state.getUser);
+// refactor
+export const getUser = createSelector(_settings, (state) => state?.getUser);

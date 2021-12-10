@@ -26,6 +26,7 @@ export const axiosInstance = axios.create({
     rejectUnauthorized: false,
   }),
 });
+
 export default store;
 
 function* rootSaga() {

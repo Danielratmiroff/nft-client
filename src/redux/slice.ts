@@ -9,7 +9,7 @@ const initialState: SettingsState = {
 
 export const name = "sytemSettings";
 
-export const slice = createSlice({
+export const systemSlice = createSlice({
   name,
   initialState,
   reducers: {
@@ -17,5 +17,3 @@ export const slice = createSlice({
     getVisitResponse,
   },
 });
-
-export const { actions, reducer } = slice;
