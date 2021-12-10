@@ -7,19 +7,16 @@ import { getVisit, getVisitResponse } from ".";
 export function* tryGetVisit({ payload }: ReturnType<typeof getVisit>) {
   try {
     const data = yield* call(umsApi.reqVisit);
-    console.log(data);
-    yield put(getVisitResponse("asdf"));
+    yield put(getVisitResponse(data));
   } catch (error) {
-    console.log(error);
+    console.log("Err: ", error);
   }
 }
 
 export function* watchGetVisitInstance() {
-  console.log("333");
   yield takeEvery(getVisit.type, tryGetVisit);
 }
 
 export default function* rootSaga() {
-  console.log("333");
   yield all([fork(watchGetVisitInstance)]);
 }

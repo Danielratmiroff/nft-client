@@ -7,8 +7,6 @@ import { ThemeConsumer, ThemeContext } from "styled-components";
 import { reqVisit } from "./redux/Apis/umsApi";
 
 const App: FC = () => {
-  const dispatch = useAppDispatch();
-
   return (
     <Fragment>
       <Styled.AppContainer>

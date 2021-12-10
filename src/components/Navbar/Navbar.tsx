@@ -11,8 +11,6 @@ const Navbar: FC = () => {
 
   const hey = useTypedSelector(getUser);
 
-  console.log(hey);
-
   dispatch(getVisit());
 
   return (
@@ -23,6 +21,7 @@ const Navbar: FC = () => {
           <Title>This is a Navbar</Title>
         </section>
       </div>
+      <p>{hey}</p>
     </Fragment>
   );
 };

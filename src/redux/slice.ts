@@ -1,9 +1,9 @@
 // src/slice.ts
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { SettingsState } from ".";
 import { getVisit, getVisitResponse } from "./caseReducers";
 
-const initialState: SettingsState = {
+const initialState: any = {
   getUser: "",
 };
 

@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { useDispatch, createSelectorHook } from "react-redux";
-import axios from "axios";
-import http from "https";
-import { systemReducer, umsSaga } from ".";
+import { createSelectorHook, useDispatch } from "react-redux";
 import createSagaMiddleware from "redux-saga";
 import { all, fork } from "redux-saga/effects";
+import { systemReducer, umsSaga } from ".";
+import axios from "axios";
+import http from "https";
 
 const sagaMiddleware = createSagaMiddleware();
 const { run: runSaga } = sagaMiddleware;
@@ -22,9 +22,7 @@ export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useTypedSelector = createSelectorHook<RootState>();
 export const axiosInstance = axios.create({
-  httpAgent: new http.Agent({
-    rejectUnauthorized: false,
-  }),
+  withCredentials: true,
 });
 
 export default store;
