@@ -1,5 +1,3 @@
 export interface SettingsState {
-  numOfViruses: number;
+  getUser: string;
 }
-
-export interface SettingsState {}

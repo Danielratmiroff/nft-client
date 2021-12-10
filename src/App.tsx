@@ -9,13 +9,10 @@ import { reqVisit } from "./redux/Apis/umsApi";
 const App: FC = () => {
   const dispatch = useAppDispatch();
 
-  reqVisit();
-
   return (
     <Fragment>
       <Styled.AppContainer>
         <Navbar />
-        <section>Hello</section>
       </Styled.AppContainer>
     </Fragment>
   );

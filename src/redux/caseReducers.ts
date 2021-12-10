@@ -1,9 +1,16 @@
 import { CaseReducer, PayloadAction } from "@reduxjs/toolkit";
-import { SettingsState } from ".";
+import { SettingsState } from "./models";
 
-export const setNumOfViruses: CaseReducer<
+export const getVisit: CaseReducer<SettingsState, PayloadAction> = (
+  state,
+  __
+) => {
+  console.log("red");
+};
+
+export const getVisitResponse: CaseReducer<
   SettingsState,
-  PayloadAction<number>
+  PayloadAction<string>
 > = (state, { payload }) => {
-  state.numOfViruses = payload;
+  console.log(payload);
 };

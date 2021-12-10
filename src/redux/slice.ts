@@ -1,19 +1,20 @@
 // src/slice.ts
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { setNumOfViruses } from "./caseReducers";
 import { SettingsState } from ".";
+import { getVisit, getVisitResponse } from "./caseReducers";
 
 const initialState: SettingsState = {
-  numOfViruses: 0,
+  getUser: "",
 };
 
-export const name = "settings";
+export const name = "sytemSettings";
 
 export const slice = createSlice({
   name,
   initialState,
   reducers: {
-    setNumOfViruses,
+    getVisit,
+    getVisitResponse,
   },
 });
 

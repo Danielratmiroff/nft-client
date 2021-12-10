@@ -1,10 +1,16 @@
 import { AxiosError, AxiosResponse } from "axios";
 import { axiosInstance } from "../store";
-import * as getURL from "../URLs";
+import { getUserManageSystemUrl } from "../URLs";
 
 export const reqVisit = async (): Promise<string> => {
-  const response = await axiosInstance.get(getURL.getUserManageSystemUrl());
-  const { data } = response;
+  const headers = {
+    Accept: "*/*",
+    "Content-type": "application/json; charset=UTF-8",
+  };
+
+  const { data } = await axiosInstance.get(getUserManageSystemUrl(), {
+    headers,
+  });
 
   return data;
 };
