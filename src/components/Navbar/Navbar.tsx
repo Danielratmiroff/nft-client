@@ -1,5 +1,6 @@
 import React, { FC, Fragment, KeyboardEvent, useState } from "react";
 import Logo from "../Logo";
+import { Title } from "./NavbarStyles";
 
 const Navbar: FC = () => {
   return (
@@ -7,7 +8,7 @@ const Navbar: FC = () => {
       <div style={{ background: "blue" }}>
         <section>
           <Logo />
-          <p>This is a Navbar</p>
+          <Title>This is a Navbar</Title>
         </section>
       </div>
     </Fragment>
