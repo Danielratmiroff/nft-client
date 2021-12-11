@@ -22,7 +22,8 @@ export type AppDispatch = typeof store.dispatch;
 export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useTypedSelector = createSelectorHook<RootState>();
 export const axiosInstance = axios.create({
-  withCredentials: true,
+  // refactor -> disabled credentials
+  withCredentials: false,
 });
 
 export default store;
