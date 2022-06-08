@@ -1,6 +1,6 @@
-### React project boilerplate
+## React project boilerplate
 
-Stack:
+#### Stack:
 - React
 - Typescript
 - Redux
