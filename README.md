@@ -1,6 +1,6 @@
 ### React project boilerplate
 
-Uses:
+Stack:
 - React
 - Typescript
 - Redux
