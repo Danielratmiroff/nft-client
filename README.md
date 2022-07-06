@@ -1,4 +1,4 @@
-## React project boilerplate
+## React project - boilerplate
 
 
 #### Stack:
